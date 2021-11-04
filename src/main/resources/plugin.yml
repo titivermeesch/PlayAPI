@@ -1,0 +1,4 @@
+main: me.playbosswar.playapi.PlayAPI
+name: PlayAPI
+author: PlayBossWar
+version: 1.0.0
