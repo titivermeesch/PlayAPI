@@ -9,8 +9,11 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Main manager which registers all the different adapters that are currently in use
+ */
 public class StorageManager {
-    private final Map<Class<?>, StorageAdapter<?>> adapters = new HashMap<>();
+    private final Map<Class<?>, StorageAdapter<?, ?>> adapters = new HashMap<>();
 
     public StorageManager() {}
 
@@ -22,7 +25,7 @@ public class StorageManager {
      *
      * @throws AdapterSetupFailedException - thrown when adapter failed to setup
      */
-    public <T> void registerStorageAdapter(Class<T> clazz, StorageAdapter<T> adapter) throws AdapterSetupFailedException, IOException {
+    public <T, Q> void registerStorageAdapter(Class<T> clazz, StorageAdapter<T, Q> adapter) throws AdapterSetupFailedException, IOException {
         AdapterRegisteredEvent adapterRegisteredEvent = new AdapterRegisteredEvent(adapter, clazz);
         Bukkit.getPluginManager().callEvent(adapterRegisteredEvent);
 
@@ -51,13 +54,13 @@ public class StorageManager {
      * @throws NullPointerException -
      */
     @SuppressWarnings("unchecked")
-    public <T> StorageAdapter<T> getStorageAdapter(Class<T> clazz) throws NullPointerException {
+    public <T, Q> StorageAdapter<T, Q> getStorageAdapter(Class<T> clazz) throws NullPointerException {
         if (adapters.get(clazz) == null) {
             throw new NullPointerException("Tried to get adapter for "
                                                    + clazz.getName() +
                                                    " but no adapter has been registered");
         }
 
-        return (StorageAdapter<T>) adapters.get(clazz);
+        return (StorageAdapter<T, Q>) adapters.get(clazz);
     }
 }

@@ -1,0 +1,4 @@
+arenas:
+  - '1234':
+      name: 'test'
+      uuid: '1234'
