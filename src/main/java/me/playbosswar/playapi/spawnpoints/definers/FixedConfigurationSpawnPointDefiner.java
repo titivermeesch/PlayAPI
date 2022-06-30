@@ -1,5 +1,6 @@
 package me.playbosswar.playapi.spawnpoints.definers;
 
+import me.playbosswar.playapi.PlayAPI;
 import me.playbosswar.playapi.arena.Arena;
 import me.playbosswar.playapi.spawnpoints.SpawnPointDefiner;
 import me.playbosswar.playapi.teams.Team;

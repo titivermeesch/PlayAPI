@@ -13,8 +13,11 @@ public class Language {
     }
 
     public HashMap<String, String> getValues() {
-        // TODO: Read file and return key values
+        // TODO: Read file and return key
+        return null;
     }
 
-    public String getValue(String key) {}
+    public String getValue(String key) {
+        return null;
+    }
 }
