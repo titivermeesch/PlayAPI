@@ -3,6 +3,7 @@ package me.playbosswar.playapi.lang;
 import java.io.File;
 import java.util.HashMap;
 
+// TODO: Take system from CommandTimer
 public class Language {
     private final String label;
     private final File file;

@@ -10,5 +10,5 @@ import java.util.Map;
 
 public interface SpawnPointDefiner {
     Map<Player, Location> getSpawnLocationsForPlayers(Arena arena, List<Player> players);
-    Map<Team, Location> getSpawnLocationsForTeams(Arena arena, List<Team> teams);
+//    Map<Team, Location> getSpawnLocationsForTeams(Arena arena, List<Team> teams);
 }

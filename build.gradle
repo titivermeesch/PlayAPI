@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'me.playbosswar'
-version '1.0.0'
+version '0.1.0'
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(17))
@@ -38,7 +38,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'me.playbosswar'
             artifactId = 'playapi'
-            version = '1.0.0'
+            version = '0.1.0'
 
             from components.java
         }

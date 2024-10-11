@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="FacetManager">
-    <facet type="minecraft" name="Minecraft">
-      <configuration>
-        <autoDetectTypes>
-          <platformType>SPIGOT</platformType>
-        </autoDetectTypes>
-      </configuration>
-    </facet>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="adc4cc83-66bf-4039-933d-05c8f340f726" />
   </component>
 </module>
